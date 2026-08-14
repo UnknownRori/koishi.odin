@@ -1,0 +1,9 @@
+build/
+builddir/
+
+*.so
+*.a
+*.dll
+*.dll.a
+*.lib
+*.dylib

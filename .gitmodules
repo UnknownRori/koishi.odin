@@ -1,0 +1,3 @@
+[submodule "external/koishi"]
+	path = external/koishi
+	url = https://github.com/taisei-project/koishi
