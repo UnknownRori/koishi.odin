@@ -1,6 +1,6 @@
 # Koishi.odin
 
-Binding for beloved (Koishi)[https://github.com/taisei-project/koishi] Komeiji 
+Binding for beloved [Koishi](https://github.com/taisei-project/koishi) Komeiji 
 for Odin Programming Language
 
 ## How to use
