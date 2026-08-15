@@ -2,11 +2,18 @@ package koishi
 
 import "core:c"
 
+KOISHI_SHARED :: #config(KOISHI_SHARED, false)
 
-// INFO : Modify this
-// to your liking
 when ODIN_OS == .Windows {
-	foreign import koishi "./libkoishi.dll.a"
+	foreign import koishi "windows/koishi.lib"
+} else when ODIN_OS == .Linux {
+	foreign import koishi "linux/libkoishi.a"
+} else when ODIN_OS == .Darwin {
+	foreign import koishi "macos/libkoishi.a"
+} else when ODIN_ARCH == .wasm32 || ODIN_ARCH == .wasm64p32 {
+	foreign import koishi "wasm/libkoishi.a"
+} else {
+	foreign import koishi "system:koishi"
 }
 
 State :: enum {
